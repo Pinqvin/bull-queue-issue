@@ -1,0 +1,22 @@
+---
+
+version: '2'
+
+services:
+  redis:
+    image: redis
+
+  server:
+    build: .
+    depends_on:
+      - redis
+    env_file:
+      - .env
+
+  worker:
+    build: .
+    command: npm run worker
+    depends_on:
+      - redis
+    env_file:
+      - .env

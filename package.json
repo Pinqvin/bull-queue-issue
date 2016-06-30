@@ -1,0 +1,20 @@
+{
+  "name": "bull-queue-issue",
+  "version": "1.0.0",
+  "description": "A sample project to demonstrate an issue where a worker may start to process a job multiple times",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "worker": "node src/worker.js",  
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "3.4.1",
+    "bull": "1.0.0",
+    "lodash": "4.13.1",
+    "node-uuid": "1.4.7",
+    "url": "0.11.0"
+  }
+}
